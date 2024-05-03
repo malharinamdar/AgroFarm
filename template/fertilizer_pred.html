@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fertilizer Prediction</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Madimi+One&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Madimi+One&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Madimi+One&family=Space+Grotesk:wght@300..700&family=Whisper&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="css/general.css"> 
+        <link rel="stylesheet" href="css/flex.css">
+        <link rel="stylesheet" href="css/fertilizer_pred.css">
+        <link rel="stylesheet" href="css/crop_pred.css">
+    </head>
+    <body class="main7">
+        <div class="header">
+            <img class="symbol" src="images/WhatsApp Image 2024-03-14 at 09.14.42_6ea92a3b.jpg">
+            <p class="slogan">"Grow Smart, Harvest Better: Your Crop Companion!"</p>
+            <button class="home" onclick="location.href='Landing_page.html'">HOME</button>
+            <button class="guide1" onclick="location.href='crop.html'">CROP</button>
+            <button class="guide2" onclick="location.href='fertilizer.html'">FERTILIZER</button>
+            <button class="about" onclick="location.href='about.html'">ABOUT US</button>
+        </div>
+        <p class="head2">Insert The Values Of The Following Parameters</p>
+        <div class="form">
+            <p class="nitrogen">Nitrogen</p>
+            <input
+            type="number"
+            class="form-control"
+            placeholder="Enter the value (example:30)"
+            required
+            />
+            <p class="phosphorous">Phosphorous</p>
+            <input
+            type="number"
+            class="form-control"
+            placeholder="Enter the value (example:30)"
+            required
+            />
+            <p class="potassium">Potassium</p>
+            <input
+            type="number"
+            class="form-control"
+            placeholder="Enter the value (example:30)"
+            required
+            />
+            <p class="crop2">Crop you want to grow</p>
+            <select
+            name="cropname"
+            class="form-control"
+            id="crop"
+            placeholder="Select a crop"
+            required
+            >
+            <option selected>Select crop</option>
+            <option>rice</option>
+            <option>maize</option>
+            <option>chickpea</option>
+            <option>kidneybeans</option>
+            <option>pigeonpeas</option>
+            <option>mothbeans</option>
+            <option>mungbean</option>
+            <option>blackgram</option>
+            <option>lentil</option>
+            <option>pomegranate</option>
+            <option>banana</option>
+            <option>mango</option>
+            <option>grapes</option>
+            <option>watermelon</option>
+            <option>muskmelon</option>
+            <option>apple</option>
+            <option>orange</option>
+            <option>papaya</option>
+            <option>coconut</option>
+            <option>cotton</option>
+            <option>jute</option>
+            <option>coffee</option>
+          </select>
+          <button class="predict_button">Predict</button>
+        </div>  
+    </body>
+</html>

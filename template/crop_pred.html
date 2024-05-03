@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crop Prediction</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Madimi+One&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Madimi+One&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Madimi+One&family=Space+Grotesk:wght@300..700&family=Whisper&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="css/general.css"> 
+        <link rel="stylesheet" href="css/flex.css">
+        <link rel="stylesheet" href="css/crop_pred.css">
+    </head>
+    <body class="main6">
+        <div class="header">
+            <img class="symbol" src="images/WhatsApp Image 2024-03-14 at 09.14.42_6ea92a3b.jpg">
+            <p class="slogan">"Grow Smart, Harvest Better: Your Crop Companion!"</p>
+            <button class="home" onclick="location.href='Landing_page.html'">HOME</button>
+            <button class="guide1" onclick="location.href='crop.html'">CROP</button>
+            <button class="guide2" onclick="location.href='fertilizer.html'">FERTILIZER</button>
+            <button class="about" onclick="location.href='about.html'">ABOUT US</button>
+        </div>
+        <p class="head1">Insert The Values Of The Following Parameters</p>
+        <div class="form">
+            <p class="nitrogen">Nitrogen</p>
+            <input
+            type="number"
+            class="form-control nitrogen" 
+            placeholder="Enter the value (example:30)"
+            required
+            />
+            <p class="phosphorous">Phosphorous</p>
+            <input
+            type="number"
+            class="form-control phosphorous" 
+            placeholder="Enter the value (example:30)"
+            required
+            />
+            <p class="potassium">Potassium</p>
+            <input
+            type="number"
+            class="form-control potassium" 
+            placeholder="Enter the value (example:30)"
+            required
+            />
+            <p class="temp">Temperature</p>
+            <input
+            type="text"
+            class="form-control temp" 
+            placeholder="Enter your Temperature"
+            required
+            />
+            <p class="humidity">Humidity</p>
+            <input
+            type="text"
+            class="form-control humidity" 
+            name="humidity"
+            placeholder="Enter your Humidity"
+            required
+            />
+            <p class="pH">pH level</p>
+            <input
+            type="number"
+            step="0.01"
+            class="form-control pH" 
+            placeholder="Enter the value"
+            />
+            <p class="rain">Rainfall(in mm)</p>
+            <input
+            type="number"
+            step="0.01"
+            class="form-control rain"
+            placeholder="Enter the value"
+            />
+            <button class="predict_button" id="predict_button">Predict</button>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("predict_button").addEventListener("click", function () {
+                    console.log("in it")
+                    // Gather form data
+                    var formData = {
+                        nitrogen: document.querySelector(".nitrogen").value,
+                        phosphorous: document.querySelector(".phosphorous").value,
+                        potassium: document.querySelector(".potassium").value,
+                        temp: document.querySelector(".temp").value,
+                        humidity: document.querySelector(".humidity").value,
+                        ph: document.querySelector(".pH").value,
+                        rainfall: document.querySelector(".rain").value,
+                    };
+    
+                    // Send AJAX request to Flask server
+                    fetch("/predict_crop", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(formData)
+                    })
+                    
+                    .then(data => {
+                        // Redirect to result page with prediction
+                        window.location.href = "/crop_result?prediction=" + data.prediction;
+                    })
+                    .catch(error => console.error("Error:", error));
+                });
+            });
+        </script> 
+    </body>
+</html>
