@@ -12,7 +12,7 @@ The website is yet to be deployed. The project was done by using simple html, cs
 I expect to further enhance the website with ReactJS.
 
 
-No thought is yet given to the deployment part. Will update on the progress.
+No thought is yet given to the deployment part, we will use hekoru likely for the deployment of the website. Will update on the progress.
 
 
 # Acknowledgement
