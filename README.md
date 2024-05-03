@@ -13,3 +13,7 @@ I expect to further enhance the website with ReactJS.
 
 
 No thought is yet given to the deployment part. Will update on the progress.
+
+
+# Acknowledgement
+thanks to Atharva Ingle's work on this project, it has been a huge help.
