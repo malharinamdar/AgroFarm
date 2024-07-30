@@ -7,9 +7,9 @@ from sklearn import tree
 import pickle 
 
 
-df=pd.read_csv('/Users/malhar.inamdar/Desktop/harvestify/Crop_recommendation (3).csv')
+df=pd.read_csv('Crop_recommendation (3).csv')
 
-with open('/Users/malhar.inamdar/Desktop/harvestify/harvestify.pkl', 'rb') as file:
+with open('harvestify.pkl', 'rb') as file:
     ml_model=pickle.load(file)
 
 columns = ['N','P','K','temperature','humidity','ph','rainfall']
