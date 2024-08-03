@@ -7,14 +7,10 @@ In the crop recommendation application, the user can provide the soil data from 
 We used logistic regression algorithm for its working since the output (crop) was fixed having 20 specific outputs and the input parameters could vary. 
 We could have used decision trees as well but went ahead with logistic regression for its simplicity.
 # Dataset
-https://www.kaggle.com/code/nirmalgaud/crop-recommendation-system-using-machine-learning/input
+<a href="https://www.kaggle.com/code/nirmalgaud/crop-recommendation-system-using-machine-learning/input">dataset</a>
 
 # Deployment
-The website is yet to be deployed. The project was done by using simple html, css and js.
-I expect to further enhance the website with ReactJS.
-
-
-No thought is yet given to the deployment part, we will use hekoru likely for the deployment of the website. Will update on the progress.
+webapp deployed on <a href="https://harvestify-web.streamlit.app/">website</a>
 
 
 # Acknowledgement
