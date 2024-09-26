@@ -63,6 +63,6 @@ if predict_button:
     
     user_result=ml_model.predict(user_data)
 
-    st.subheader('The prediction is: ')
+    st.subheader('The suitable crop prediction is: ')
     st.write(user_result)
 
