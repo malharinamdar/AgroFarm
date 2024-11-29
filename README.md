@@ -1,4 +1,4 @@
-# Harvestify
+# AgroFarm
 ML Based agricultural crop recommendation website.
 In this project, I present a website in which the following applications are implemented; Crop recommendation.
 
@@ -13,5 +13,3 @@ We could have used decision trees as well but went ahead with logistic regressio
 webapp deployed on <a href="https://harvestify-web.streamlit.app/">website</a>
 
 
-# Acknowledgement
-Thanks to Atharva Ingle's work on this project, it has been a huge help.
