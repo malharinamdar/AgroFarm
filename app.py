@@ -14,7 +14,7 @@ with open('harvestify.pkl', 'rb') as file:
 
 columns = ['N','P','K','temperature','humidity','ph','rainfall']
 
-st.title('Welcome to Harvestify') 
+st.title('Welcome to AgroFarm') 
 st.write('Your agricultutral crop companion') 
 
 # Add some explanation or instructions
