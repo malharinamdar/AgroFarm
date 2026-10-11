@@ -2,8 +2,6 @@
 
 Crop and fertilizer recommendations from a soil test and local climate.
 
-**Live → [agrofarm-orpin.vercel.app](https://agrofarm-orpin.vercel.app)**
-
 ![AgroFarm](docs/home.webp)
 
 ## What it does
